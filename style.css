@@ -91,6 +91,7 @@ main {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            text-align: center;
             border-radius: .75rem;
             box-shadow: 6px 6px 16px rgba(163, 177, 198, 0.6) , -6px -6px 16px rgba(255, 255, 255, 0.5);
             &:hover {

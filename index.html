@@ -14,10 +14,26 @@
     <main>
         <section class="white-player">
             <div class="player">
-                <h4 class="player-title">Playing Now</h4>
+                <h5 class="player-title">Playing Now</h5>
                 <div class="player-album">
                     <img class="album-cover" src="https://images.unsplash.com/photo-1530893608544-cd10fda1ac14?q=80&w=2808&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Album Cover">
                 </div>
+                <h2 class="player-artist">Singha</h2>
+                <h3 class="player-level">Mon Amour</h3>
+                <input 
+                    type="range" 
+                    id="range" 
+                    step="any" 
+                    min="0" 
+                    max="100" 
+                    value="0">
+                <div class="audio-duration">
+                    <div class="start">0:00</div>
+                    <div class="end">0:00</div>
+                </div>
+                <audio class="player-audio" controls id="audio">
+                    <source src="./Audio/Mon Amour.mp3">
+                </audio>
             </div>
 
         </section>
