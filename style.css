@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 :root {
     --primary-color: rgb(224, 229, 236);
     --secondary-color: rgb(237, 245, 252);
@@ -14,17 +20,16 @@
 
 html, body {
     margin: 0;
-    padding: 1rem 3rem;
+    padding: 0;
     box-sizing: border-box;
     font-family: "Raleway", sans-serif;
     font-style: normal;
     height: 100vh;
     color: var(--accent-color);
     h1 {
-        margin-bottom: 7rem;
         text-align: center;
-        /* font-size: 2.027rem; */
-        font-size: 3vw;
+        font-size: 2.027rem;
+        /* font-size: 3vw; */
         color: var(--my-black);
         font-weight: 700;
     }
@@ -50,11 +55,20 @@ html, body {
         font-size: 0.889rem;
     }
 }
+
 header {
     width: 100%;
     justify-content: center;
-    align-items: center;
+    text-align: center;
     height: auto;
+    background-color: var(--accent-color);
+    margin: 0;
+    padding: 1rem 1rem;
+    box-shadow: 6px 6px 12px #d9d9d9, 
+    -6px -6px 12px #f5f5f5;
+    h1 .h1examples {
+        color: whitesmoke;
+    }
 }
 
 main {
