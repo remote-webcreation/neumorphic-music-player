@@ -98,6 +98,20 @@ main {
                 scale: 1.0125;
                 transition: transform 1.02s ease-in-out;
             }
+            .player-artist {
+                font-size: 1.2rem;
+                font-weight: 500;
+                opacity: .5;
+                margin: 1.25rem 0rem 0rem 0rem;
+            }
+            .player-song {
+                width: 100%;
+                text-align: center;
+                font-weight: 400;
+                font-size: 1em;
+                opacity: .9;
+                margin: 0;
+            }
             .player-title {
                 width: 95%;
                 text-align: center;
@@ -116,6 +130,10 @@ main {
                     border-radius: 50%;
                     box-shadow: 0px 0px 7px rgba(163, 177, 198,), 0px 0px 7px rgba(163, 177, 198,), -8px -8px 50px rgba (255, 255, 255, 0.8px), 3px 3px 25px rgba (0, 0, 0, .1);
                 }
+            }
+            .player-button {
+                width: 2.125rem;
+                color: white;
             }
         }
     }
