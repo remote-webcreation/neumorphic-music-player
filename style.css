@@ -93,6 +93,20 @@ main {
             align-items: center;
             border-radius: .75rem;
             box-shadow: 6px 6px 16px rgba(163, 177, 198, 0.6) , -6px -6px 16px rgba(255, 255, 255, 0.5);
+            &:hover {
+                scale: 1.0125;
+                transition: transform 1.02s ease-in-out;
+            }
+            .player-title {
+                width: 95%;
+                text-align: center;
+                margin-bottom: 1.5625rem;
+                font-weight: 600;
+                font-size: .75rem;
+                text-transform: uppercase;
+                letter-spacing: .125rem;
+                margin: 2.1875rem 0;
+            }
             .player-album {
                 .album-cover {
                     width: 9.375rem;
