@@ -1,5 +1,5 @@
 :root {
-    --primary-color: rgb(253, 255, 252);
+    --primary-color: rgb(224, 229, 236);
     --secondary-color: rgb(237, 245, 252);
     --accent-color:rgb(163, 155, 168);
     --my-black: rgb(65, 74, 84);
@@ -65,7 +65,20 @@ main {
     .white-player {
         display: flex;
         justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: var(--primary-color);
         .player {
+            width: 18.75rem;
+            height: 34.375rem;
+            background-color: var(--primary-color);
+            user-select: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: .75rem;
+            box-shadow: 6px 6px 16px rgba(163, 177, 198, 0.6) , -6px -6px 16px rgba(255, 255, 255, 0.5);
             .player-album {
                 .album-cover {
                     width: 9.375rem;
