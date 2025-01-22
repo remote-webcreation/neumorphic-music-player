@@ -1,0 +1,14 @@
+:root {
+    --primary-color: rgb(253, 255, 252);
+    --secondary-color: rgb(237, 245, 252);
+    --accent-color:rgb(163, 155, 168);
+    /* --shadow-color:;
+    --text-color:; */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
