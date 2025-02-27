@@ -22,7 +22,7 @@
                 </div>
 
                 <h2 class="player-artist">Sam Cruz Music</h2>
-                <h3 class="player-song">Vas Loin (Tayc X Aya Nakamura)</h3>
+                <h3 class="player-song">Vas Loin <br> (Tayc X Aya Nakamura)</h3>
 
                 <input 
                     type="range"  
@@ -65,6 +65,19 @@
                 audio.setAttribute('data-condition', 'play');
                 playbutton.innerHTML = '<i class="fa-solid fa-pause fa-sm" style="color: #ffffff;"></i>';
                 document.querySelector('.player-album img').className = 'rotate';
+            }else {
+                audio.pause();
+                audio.setAttribute('data-condition', 'paused');
+                playbutton.innerHTML = '<i class="fa-solid fa-play"></i>';
+                document.querySelector('.player-album img').className = '';
+                // albumCover.classList.remove('rotate');
+
+            }
+            forward.onclick = function(){
+                audio.currentTime += 5
+            }
+            backward.onclick = function(){
+                audio.currentTime -= 5
             }
         }
     </script>
