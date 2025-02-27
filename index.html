@@ -18,7 +18,7 @@
                 <h5 class="player-title">Playing Now</h5>
 
                 <div class="player-album">
-                    <img id="album-cover" class="rotate" src="https://images.unsplash.com/photo-1530893608544-cd10fda1ac14?q=80&w=2808&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Album Cover">
+                    <img id="album-cover"  src="https://images.unsplash.com/photo-1530893608544-cd10fda1ac14?q=80&w=2808&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Album Cover">
                 </div>
 
                 <h2 class="player-artist">Sam Cruz Music</h2>
@@ -36,7 +36,7 @@
                     <div class="start">0:00</div>
                     <div class="end">0:00</div>
                 </div>
-                <audio class="player-audio" controls id="audio">
+                <audio class="player-audio" controls id="audio" data-condition="paused">
                     <source src="./Audio/(Piano + Voix) Vas Loin (Tayc X Aya Nakamura) - Sam Cruz Music.mp3" type="audio/mp3">
                 </audio>
                 <div class="player-controls">
@@ -54,8 +54,22 @@
 
         </section>
     </main>
+    <script>
+        var audio = document.getElementById('audio');
+        var playbutton = document.getElementById('play');
+        var forward = document.getElementById('forward');
+        var backward = document.getElementById('backward');
+        playbutton.onclick = function(){
+            if (audio.getAttribute('data-condition') == 'paused'){
+                audio.play();
+                audio.setAttribute('data-condition', 'play');
+                playbutton.innerHTML = '<i class="fa-solid fa-pause fa-sm" style="color: #ffffff;"></i>';
+                document.querySelector('.player-album img').className = 'rotate';
+            }
+        }
+    </script>
 
-
+    <!-- font-awesome kit -->
     <script src="https://kit.fontawesome.com/3c5c346bdf.js" crossorigin="anonymous"></script>
 
 </body>
