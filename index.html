@@ -56,59 +56,65 @@
     </main>
 
     <script>
-
         var audio = document.getElementById('audio');
         var playbutton = document.getElementById('play');
         var forward = document.getElementById('forward');
         var backward = document.getElementById('backward');
         var albumCover = document.querySelector('.player-album img');
     
-
         playbutton.onclick = function(){
-        if (audio.getAttribute('data-condition') == 'paused'){
-            audio.play();
-            audio.setAttribute('data-condition', 'play');
-            playbutton.innerHTML = '<i class="fa-solid fa-pause fa-sm" style="color: #ffffff;"></i>';
-            albumCover.classList.add('rotate');
-        } else {
-            audio.pause();
-            audio.setAttribute('data-condition', 'paused');
-            playbutton.innerHTML = '<i class="fa-solid fa-play fa-sm" style="color: #ffffff;"></i>';
-            albumCover.classList.remove('rotate');
+            if (audio.getAttribute('data-condition') == 'paused'){
+                audio.play();
+                audio.setAttribute('data-condition', 'play');
+                playbutton.innerHTML = '<i class="fa-solid fa-pause fa-sm" style="color: #ffffff;"></i>';
+                albumCover.classList.add('rotate');
+            } else {
+                audio.pause();
+                audio.setAttribute('data-condition', 'paused');
+                playbutton.innerHTML = '<i class="fa-solid fa-play fa-sm" style="color: #ffffff;"></i>';
+                albumCover.classList.remove('rotate');
+            }
         }
-    }
-
+    
         forward.onclick = function(){
-        audio.currentTime += 5;
-    }
-
+            audio.currentTime += 5;
+        }
+    
         backward.onclick = function(){
-        audio.currentTime -= 5;
-    }
-
+            audio.currentTime -= 5;
+        }
+    
         audio.onloadedmetadata = function() {
-        var duration = audio.duration;
-        var min = Math.floor(duration / 60);
-        var sec = Math.floor(duration % 60);
+            var duration = audio.duration;
+            range.max = duration;
+            var min = Math.floor(duration / 60);
+            var sec = Math.floor(duration % 60);
 
-        if (sec < 10){
-            sec = '0' + sec;
+            if (sec < 10){
+                sec = '0' + sec;
+            }
+
+            document.getElementsByClassName('end')[0].innerHTML = min + ':' + sec;
         }
-
-        document.getElementsByClassName('end')[0].innerHTML = min + ':' + sec;
-    }
-
+    
         audio.ontimeupdate = function(){
-        var current = audio.currentTime;
-        var min = Math.floor(current / 60);
-        var sec = Math.floor(current % 60);
+            var current = audio.currentTime;
+            range.value = current;
+            var min = Math.floor(current / 60);
+            var sec = Math.floor(current % 60);
 
-        if (sec < 10){
-            sec = '0' + sec;
+            if (sec < 10){
+                sec = '0' + sec;
+            }
+
+            document.getElementsByClassName('start')[0].innerHTML = min + ':' + sec;
         }
 
-        document.getElementsByClassName('start')[0].innerHTML = min + ':' + sec;
-    }
+        range.oninput = function() {
+            audio.currentTime = range.value;
+        }
+
+        
     </script>
 
     <!-- font-awesome kit -->

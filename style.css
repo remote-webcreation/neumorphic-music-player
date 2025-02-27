@@ -125,11 +125,14 @@ main {
 
             .player-album {
                 width: 6.25rem;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
                 #album-cover {
-                    width: 9.375rem;
-                    height: 9.375rem;
+                    width: 7.8125rem;
+                    height: 7.8125rem;
                     border-radius: 50%;
-                    box-shadow: 0px 0px 7px rgba(163, 177, 198,), 0px 0px 7px rgba(163, 177, 198,), -8px -8px 50px rgba (255, 255, 255, 0.8px), 3px 3px 25px rgba (0, 0, 0, .1);
+                    box-shadow: 0px 0px 7px rgb(154, 168, 187), 0px 0px 7px rgba(163, 177, 198,), -8px -8px 50px rgba (255, 255, 255, 0.8px), 3px 3px 25px rgba (0, 0, 0, .1);
                 }
             }
 
