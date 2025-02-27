@@ -123,6 +123,16 @@ main {
                 cursor: pointer;
             }
 
+            .player-album {
+                width: 6.25rem;
+                #album-cover {
+                    width: 9.375rem;
+                    height: 9.375rem;
+                    border-radius: 50%;
+                    box-shadow: 0px 0px 7px rgba(163, 177, 198,), 0px 0px 7px rgba(163, 177, 198,), -8px -8px 50px rgba (255, 255, 255, 0.8px), 3px 3px 25px rgba (0, 0, 0, .1);
+                }
+            }
+
             .audio-duration {
                 margin-top: -1.875rem;
                 display: flex;
@@ -211,15 +221,7 @@ main {
                 letter-spacing: .125rem;
                 margin: 2.1875rem 0;
             }
-            .player-album {
-                width: 9.375rem;
-                #album-cover {
-                    width: 9.375rem;
-                    height: 9.375rem;
-                    border-radius: 50%;
-                    box-shadow: 0px 0px 7px rgba(163, 177, 198,), 0px 0px 7px rgba(163, 177, 198,), -8px -8px 50px rgba (255, 255, 255, 0.8px), 3px 3px 25px rgba (0, 0, 0, .1);
-                }
-            }
+            
         }
     }
 }
