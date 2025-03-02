@@ -76,11 +76,15 @@ main {
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
-    .white-player {
+
+    .white-player, .dark-player {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
+    }
+
+    .white-player {
         background-color: var(--primary-color);
         .player {
             width: 18.75rem;
@@ -96,7 +100,7 @@ main {
             box-shadow: 6px 6px 16px rgba(163, 177, 198, 0.6) , -6px -6px 16px rgba(255, 255, 255, 0.5);
             &:hover {
                 scale: 1.0125;
-                transition: transform 1.02s ease-in-out;
+                transition: transform .35s ease-in-out;
             }
             .player-level {
                 width: 80%;
@@ -132,7 +136,7 @@ main {
                     width: 7.8125rem;
                     height: 7.8125rem;
                     border-radius: 50%;
-                    box-shadow: 0px 0px 7px rgb(154, 168, 187), 0px 0px 7px rgba(163, 177, 198,), -8px -8px 50px rgba (255, 255, 255, 0.8px), 3px 3px 25px rgba (0, 0, 0, .1);
+                    box-shadow: -6px -6px 16px rgba(240, 237, 237, 0.5), 6px 6px 16px rgba(163, 177, 198, 0.6);
                 }
             }
 
@@ -200,16 +204,16 @@ main {
             }
             
             .player-artist {
-                font-size: .875rem;
+                font-size: .8rem;
                 font-weight: 500;
-                opacity: .5;
+                opacity: .7;
                 margin: 1.25rem 0rem 0rem 0rem;
             }
             .player-song {
                 width: 100%;
                 text-align: center;
                 font-weight: 400;
-                font-size: 1rem;
+                font-size: .9rem;
                 opacity: 1;
                 margin-top: .5rem;
                 line-height: 1.25;
