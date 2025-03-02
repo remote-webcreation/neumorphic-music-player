@@ -65,11 +65,11 @@ range.oninput = function() {
 // dark player
 
 var minimalAudio = document.getElementById('minimal-audio');
-        var minimalPlaybutton = document.getElementById('minimal-play');
-        var minimalAlbumCover = document.getElementById('minimal-album-cover');
-        var minimalRange = document.getElementById('minimal-range');
+var minimalPlaybutton = document.getElementById('minimal-play');
+var minimalAlbumCover = document.getElementById('minimal-album-cover');
+var minimalRange = document.getElementById('minimal-range');
 
-        minimalPlaybutton.onclick = function() {
+    minimalPlaybutton.onclick = function() {
             if (minimalAudio.getAttribute('data-condition') == 'paused') {
                 minimalAudio.play();
                 minimalAudio.setAttribute('data-condition', 'play');
@@ -81,9 +81,9 @@ var minimalAudio = document.getElementById('minimal-audio');
                 minimalPlaybutton.innerHTML = '<i class="fa-solid fa-play fa-sm" style="color: #ffffff;"></i>';
                 minimalAlbumCover.classList.remove('rotate');
             }
-        };
+    };
 
-        minimalAudio.onloadedmetadata = function() {
+    minimalAudio.onloadedmetadata = function() {
             var duration = minimalAudio.duration;
             minimalRange.max = duration;
             var min = Math.floor(duration / 60);
@@ -94,9 +94,9 @@ var minimalAudio = document.getElementById('minimal-audio');
             }
 
             document.querySelectorAll('.minimal-player .end')[0].innerHTML = min + ':' + sec;
-        };
+    };
 
-        minimalAudio.ontimeupdate = function() {
+    minimalAudio.ontimeupdate = function() {
             var current = minimalAudio.currentTime;
             minimalRange.value = current;
             var min = Math.floor(current / 60);
@@ -107,8 +107,8 @@ var minimalAudio = document.getElementById('minimal-audio');
             }
 
             document.querySelectorAll('.minimal-player .start')[0].innerHTML = min + ':' + sec;
-        };
+    };
 
-        minimalRange.oninput = function() {
+    minimalRange.oninput = function() {
             minimalAudio.currentTime = minimalRange.value;
-        };
+    };
