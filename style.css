@@ -147,6 +147,7 @@ main {
     /* white player */
 
     .white-player {
+        padding-top: 7.8125rem;
         background-color: var(--primary-color);
         .player {
             background-color: var(--primary-color);
